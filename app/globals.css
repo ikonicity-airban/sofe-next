@@ -20,14 +20,12 @@
   --translucent: rgba(255, 255, 255, 0.068);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --light-color: #202020;
+    --light-color: #ffffff;
     --dark-color: #f7f1f1;
-    --muted-text-dark: rgba(201, 201, 201, 0.692);
-    --muted-text-light: rgba(77, 77, 77, 0.623);
   }
-}
+} */
 
 * {
   margin: 0;

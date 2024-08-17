@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, "min-h-screen w-[100svw]")}>
+      <body className={clsx(inter.className, "min-h-screen w-screen")}>
         {children}
         {/* <script src="../node_module/flowbite/dist/flowbite.min.js"></script> */}
       </body>

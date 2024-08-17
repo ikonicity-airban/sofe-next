@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     },
   ],
   description: desc,
-  openGraph: {
-    title: {
-      template: "%s | SOFE Group",
-      default: "Welcome to SOFE Group",
-    },
-    locale: "ng",
-    tags: "web3 ",
-  },
+  // openGraph: {
+  //   title: {
+  //     template: "%s | SOFE Group",
+  //     default: "Welcome to SOFE Group",
+  //   },
+  //   locale: "ng",
+  //   tags: "web3 ",
+  // },
 };
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -39,12 +39,10 @@ function Layout({ children }: { children: React.ReactNode }) {
         "min-h-screen gradient-background w-full relative"
       )}
     >
-      <section className="w-full">
+      <section className="mx-auto">
         {/* Navbar */}
         <Navbar />
-        <React.Suspense fallback={"Loading..."}>
-          <main className="relative">{children}</main>
-        </React.Suspense>
+        <main className="relative mx-auto">{children}</main>
       </section>
       <ScrollToTop />
       {/* Footer */}

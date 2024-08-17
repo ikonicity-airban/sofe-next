@@ -35,7 +35,7 @@ export default function Team() {
       <Heading subtitle="Meet our Incredulous Team Members" title="SOFE TEAM" />
       <div className="grid-card-container p-6">
         {TeamMembers.map((mem) => (
-          <TeamCard teamMember={mem} />
+          <TeamCard teamMember={mem} key={mem.name}/>
         ))}
       </div>
       <div className="hidden absolute right-0 top-[50%] size-10 md:grid place-items-center">

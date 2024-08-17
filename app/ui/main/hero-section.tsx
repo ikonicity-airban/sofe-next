@@ -7,28 +7,11 @@ import { Button } from "../button";
 import PlanetCanvas from "../models/planet";
 import Typewriter from "../effects/typewriter";
 import arrow from "@/public/Arrow_03.svg";
-import carousel1 from "@/public/Businessman investing in bitcoin.png";
-import carousel2 from "@/public/iPhone 12 Pro (Wooden Hands).png";
 import globe from "@/public/globe.svg";
 import sponsor from "@/public/List.png";
 
-const images: StaticImageData[] = [carousel1, carousel2];
+// const images: StaticImageData[] = [carousel1, carousel2];
 export default function HeroSection() {
-  const [currentImg, setCurrentImg] = useState(0);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => changeTab(), 10000);
-
-    return () => clearTimeout(timeout);
-  }, [currentImg]);
-
-  function changeTab() {
-    if (currentImg < images.length - 1) {
-      setCurrentImg((prev) => prev + 1);
-    } else {
-      setCurrentImg(0);
-    }
-  }
 
   return (
     <main className="pt-10 bg-[url('/herobg.png')] bg-cover min-h-[85dvh]">
@@ -40,9 +23,9 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col gap-4 md:gap-2 laptop:mt-5">
-              <h1 className="text-4xl pb-2 leading-[1.4em] font-light clip-text text-transparent bg-gradient-to-tr from-[#766] to-white md:text-5xl desktop:text-7xl">
+              <h1 className="text-4xl pb-2 leading-[1.4em] font-light clip-text text-transparent bg-gradient-to-tr from-[#766] to-white md:text-5xl desktop:text-6xl">
                 Building <br />
-                <span className="text-light text-[2.5rem] font-medium">
+                <span className="text-light text-[3.5rem] font-medium">
                   Future Africa
                 </span>{" "}
                 <br />
@@ -63,7 +46,7 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="flex-1 md:flex-[0.5] h-auto flex justify-center desktop:flex-[0.5] object-contain mb-10">
-            <Suspense fallback="Loading...">
+            <Suspense fallback={<div className="grid place-item-center"><p>Loading</p></div>}>
 
             <PlanetCanvas />
             </Suspense>
