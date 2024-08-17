@@ -1,13 +1,14 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-     "./node_modules/flowbite/**/*.js"
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite/**/*.js",
   ],
+  darkMode: ["class"],
   theme: {
     screens: {
       smallScreens: "320px",
@@ -20,29 +21,29 @@ const config: Config = {
     },
     extend: {
       gridTemplateColumns: {
-        '13': 'repeat(13, minmax(0, 1fr))',
+        "13": "repeat(13, minmax(0, 1fr))",
       },
       colors: {
-        primary: 'var(--foreground-primary)',
-        'primary-light': 'var(--foreground-primary-light)',
-        light: 'var(--light-color)',
-        dark: 'var(--dark-color)',
-        muted: 'var(--muted-text-light)',
-        background: 'var(--background-color)'
+        primary: "var(--foreground-primary)",
+        "primary-light": "var(--foreground-primary-light)",
+        light: "var(--light-color)",
+        dark: "var(--dark-color)",
+        muted: "var(--muted-text-light)",
+        background: "var(--background-color)",
       },
       fontFamily: {
-        code: 'var(--font-code)',
-        sans: 'var(--font-sans)'
+        code: "var(--font-code)",
+        sans: "var(--font-sans)",
       },
       transformOrigin: {
-        '0': '0%',
-        '50': '50%',
-        '100': '100%',
-        'custom': '10% 0%', // your custom coordinates
+        "0": "0%",
+        "50": "50%",
+        "100": "100%",
+        custom: "10% 0%", // your custom coordinates
       },
     },
     animation: {
-      "testimonials-scroll": 'scroll-left 2s infinite',
+      "testimonials-scroll": "scroll-left 2s infinite",
       "shake-card": "shake-card 2000ms forwards",
       "fade-in": "fade-in 3s ease-in-out forwards",
       title: "title 3s ease-out forwards",
@@ -52,14 +53,12 @@ const config: Config = {
 
     keyframes: {
       shimmer: {
-        '100%': {
-          transform: 'translateX(100%)',
+        "100%": {
+          transform: "translateX(100%)",
         },
       },
       "scroll-left": {
-        '0%, 100%': {
-
-        }
+        "0%, 100%": {},
       },
       "fade-in": {
         "0%": {
@@ -84,7 +83,7 @@ const config: Config = {
           opacity: "100%",
         },
       },
-      
+
       "fade-in-right": {
         "0%": {
           transform: "translateX(-100%)",
@@ -144,8 +143,7 @@ const config: Config = {
         },
       },
     },
-
   },
-  plugins: [require('@tailwindcss/forms'), require('flowbite/plugin')],
+  plugins: [require("@tailwindcss/forms"), require("flowbite/plugin")],
 };
 export default config;

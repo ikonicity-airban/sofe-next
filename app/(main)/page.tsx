@@ -21,13 +21,14 @@ export const metadata: Metadata = {
 
 function HomePage() {
   return (
-    <section className="max-w-[90%] select-none">
-      {/* <HeroSection /> */}
-      {/* <Welcome /> */}
-      {/* <Services count={3} /> */}
-      {/* <Features /> */}
-      {/* <Testimonials /> */}
-      {/* <Divider /> */}
+    <section className="relative w-full select-none">
+      <HeroSection />
+      <Suspense fallback={<h4>Loading...</h4>}>
+        <Services count={3} />
+      </Suspense>
+      <Features />
+      <Testimonials />
+      <Divider />
       <Team />
       {/* <div className="bg-[url('/map.png')] bg-fixed bg-contain bg-no-repeat bg-center">
         <div className="backdrop-blur-[4px] bg-[#0018]">

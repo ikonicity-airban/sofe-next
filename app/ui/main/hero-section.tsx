@@ -23,9 +23,9 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col gap-4 md:gap-2 laptop:mt-5">
-              <h1 className="text-4xl pb-2 leading-[1.4em] font-light clip-text text-transparent bg-gradient-to-tr from-[#766] to-white md:text-5xl desktop:text-6xl">
+              <h1 className="text-4xl  pb-2 leading-[1.6em] font-semibold  text-white md:text-5xl desktop:text-5xl">
                 Building <br />
-                <span className="text-light text-[3.5rem] font-medium">
+                <span className=" text-[3.5rem] clip-text leading-snug font-bold">
                   Future Africa
                 </span>{" "}
                 <br />
@@ -46,8 +46,7 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="flex-1 md:flex-[0.5] h-auto flex justify-center desktop:flex-[0.5] object-contain mb-10">
-            <Suspense fallback={<div className="grid place-item-center"><p>Loading</p></div>}>
-
+            <Suspense fallback="Loading...">
             <PlanetCanvas />
             </Suspense>
           </div>

@@ -14,16 +14,22 @@
   --foreground-primary: rgb(228, 83, 60);
   --font-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-  --muted-text-light: rgba(201, 201, 201, 0.692);
-  --muted-text-dark: rgba(77, 77, 77, 0.623);
+  --muted-text-light: rgba(232, 232, 232, 0.919);
+  --muted-text-dark: rgba(255, 255, 255, 0.919);
   --text-bg-gradient: linear-gradient(to bottom, #fff, rgb(194, 56, 147));
   --translucent: rgba(255, 255, 255, 0.068);
 }
 
 /* @media (prefers-color-scheme: dark) {
   :root {
+<<<<<<< HEAD
     --light-color: #ffffff;
     --dark-color: #f7f1f1;
+=======
+    --light-color: #f7f1f1;
+    --muted-text-dark: rgba(237, 235, 235, 0.94);
+    --muted-text-light: rgba(224, 224, 224, 0.925);
+>>>>>>> 8ab789f4a6b457f74e251ce0f86e3cce50d5f2c1
   }
 } */
 
@@ -73,9 +79,9 @@ a {
   margin: 0;
 }
 
-
 body {
   min-width: 280px;
+  width: 100vw;
   min-height: 100vh;
   font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -220,7 +226,7 @@ select:focus {
     @apply rounded-sm flex justify-self-center flex-col items-center bg-[var(--translucent)] backdrop-blur-md border-b-2 border-r-2 border-[#fff3] overflow-hidden;
   }
   .clip-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-bl from-primary to-primary-light;
+    @apply text-transparent bg-clip-text bg-gradient-to-bl from-[#ff7c54e1] to-primary-light;
   }
 
   .testimonial-card {
@@ -280,7 +286,6 @@ select:focus {
       var(--light-color)
     );
   }
-
   .link-underline::after {
     content: "";
     position: absolute;

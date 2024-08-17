@@ -4,8 +4,7 @@ import Section from "../section";
 export default function Welcome() {
   return (
     <Section className="p-6">
-      <Heading subtitle="Hello, 👋 Welcome" title="what sofe is about" />
-      <div className="p-4 text-muted mx-auto text-lg max-w-screen-md leading-[1.5rem]">
+      <div className="p-4 text-muted mx-auto md:text-lg max-w-screen-md md:leading-[1.5rem]">
         <p className="">
           Our Vision To become a leading brand in transforming the world through
           creative digital and innovative solutions. Our Mission To pioneer
