@@ -24,12 +24,49 @@ const config: Config = {
         "13": "repeat(13, minmax(0, 1fr))",
       },
       colors: {
-        primary: "var(--foreground-primary)",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
         "primary-light": "var(--foreground-primary-light)",
         light: "var(--light-color)",
         dark: "var(--dark-color)",
-        muted: "var(--muted-text-light)",
-        background: "var(--background-color)",
+        muted: {
+          DEFAULT: "hsla(var(--muted))",
+          foreground: "hsla(var(--muted-foreground))",
+        },
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
       },
       fontFamily: {
         code: "var(--font-code)",
@@ -39,7 +76,12 @@ const config: Config = {
         "0": "0%",
         "50": "50%",
         "100": "100%",
-        custom: "10% 0%", // your custom coordinates
+        custom: "10% 0%",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
     },
     animation: {
@@ -50,7 +92,6 @@ const config: Config = {
       "fade-left": "fade-left 3s ease-in-out forwards",
       "fade-right": "fade-right 3s ease-in-out forwards",
     },
-
     keyframes: {
       shimmer: {
         "100%": {
@@ -71,25 +112,21 @@ const config: Config = {
           opacity: "100%",
         },
       },
-
       "fade-in-left": {
         "0%": {
           transform: "translateX(100%)",
           opacity: "0%",
         },
-
         "30%": {
           transform: "translateX(0%)",
           opacity: "100%",
         },
       },
-
       "fade-in-right": {
         "0%": {
           transform: "translateX(-100%)",
           opacity: "0%",
         },
-
         "30%": {
           transform: "translateX(0%)",
           opacity: "100%",
@@ -100,7 +137,6 @@ const config: Config = {
           transform: "translateX(100%)",
           opacity: "0%",
         },
-
         "30%": {
           transform: "translateX(0%)",
           opacity: "100%",
@@ -114,7 +150,6 @@ const config: Config = {
           transform: "translateX(-100%)",
           opacity: "0%",
         },
-
         "30%": {
           transform: "translateX(0%)",
           opacity: "100%",
@@ -136,7 +171,6 @@ const config: Config = {
         "80%": {
           opacity: "100%",
         },
-
         "100%": {
           "line-height": "100%",
           opacity: "100%",
@@ -144,6 +178,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("flowbite/plugin")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+  ],
 };
 export default config;

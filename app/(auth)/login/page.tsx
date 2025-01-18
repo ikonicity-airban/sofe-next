@@ -1,11 +1,13 @@
-import Heading from "@/app/ui/heading";
-import LoginForm from "@/app/ui/auth/login-form";
-import Section from "@/app/ui/section";
+import LoginForm from "@/components/auth/login-form";
+import Section from "@/components/ui/section";
+import Image from "next/image";
 
 export default function LoginPage() {
   return (
-    <Section>
-      <LoginForm />
-    </Section>
+    <div className="flex flex-col justify-center items-center">
+      <Section className="w-full min-h-[70vh] flex flex-col items-center">
+        <LoginForm />
+      </Section>
+    </div>
   );
 }

@@ -1,3 +1,0 @@
-.fade-in:nth-child(odd) {
-    animation: fade-in-left 250ms forwards;
-}

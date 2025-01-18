@@ -1,6 +1,6 @@
-import Heading from "@/app/ui/heading";
-import Welcome from "@/app/ui/main/welcome-section";
-import Section from "@/app/ui/section";
+import Heading from "@/components/ui/heading";
+import Welcome from "@/components/main/welcome-section";
+import Section from "@/components/ui/section";
 
 function AboutPage() {
   return <Section>

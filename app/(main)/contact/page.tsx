@@ -1,4 +1,4 @@
-import CTAForm from "@/app/ui/main/CTA";
+import CTAForm from "@/components/main/CTA";
 
 function ContactsPage() {
   return <div>

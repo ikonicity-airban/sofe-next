@@ -1,23 +1,19 @@
-import "@/app/main.module.css";
+// import "@/app/main.module.css";
 
-import CTAForm from "../ui/main/CTA";
-import Confetti from "../ui/effects/confetti";
-import Divider from "../ui/divider";
-import Features from "../ui/main/features";
-import HeroSection from "../ui/main/hero-section";
+import Divider from "@/components/ui/divider";
+import Features from "@/components/main/features";
+import HeroSection from "@/components/main/hero-section";
 import { Metadata } from "next";
-import Services from "../ui/main/services";
+import Services from "@/components/main/services";
 import { Suspense } from "react";
-import Team from "../ui/main/team";
-import Testimonials from "../ui/main/testimonials";
-import Welcome from "../ui/main/welcome-section";
+import Team from "@/components/main/team";
+import Testimonials from "@/components/main/testimonials";
+import CTAForm from "@/components/main/CTA";
 
 export const metadata: Metadata = {
-  title: {
-    template: "Home"
-  },
-  keywords: ["Crypto","Blockchain", "DeFi", "Media", "Marketing", "SOFEGroup"]
-}
+  title: "Home",
+  keywords: ["Crypto", "Blockchain", "DeFi", "Media", "Marketing", "SOFEGroup"],
+};
 
 function HomePage() {
   return (
@@ -30,11 +26,11 @@ function HomePage() {
       <Testimonials />
       <Divider />
       <Team />
-      {/* <div className="bg-[url('/map.png')] bg-fixed bg-contain bg-no-repeat bg-center">
+      <div className="bg-[url('/map.png')] bg-fixed bg-contain bg-no-repeat bg-center">
         <div className="backdrop-blur-[4px] bg-[#0018]">
           <CTAForm />
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }

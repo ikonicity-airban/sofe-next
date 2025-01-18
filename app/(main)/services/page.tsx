@@ -1,4 +1,4 @@
-import Services from "@/app/ui/main/services";
+import Services from "@/components/main/services";
 import React from "react";
 
 function ServicesPage() {
